@@ -118,3 +118,19 @@ public interface IDamageable
 - Original change `toy-tower-defense` is split into 21 steps (`toy-tower-defense-step{2-22}`)
 - Step 1 (project init) is archived in `openspec/changes/archive/2026-06-07-toy-tower-defense-step1/`
 - Use `/opsx-apply` to implement individual steps, `/opsx-archive` to archive completed steps
+
+## WORKFLOW: SPEC SYNC RULE
+**归档步骤后必须同步规格文档到主规格目录。**
+
+执行顺序：
+1. `/opsx-archive` 归档变更
+2. 检查 `openspec/changes/archive/<date>-<name>/specs/` 中的 delta specs
+3. 将 delta specs 同步到 `openspec/specs/<capability>/spec.md`
+4. 提交并推送
+
+示例：
+```bash
+# 归档后同步
+cp openspec/changes/archive/2026-06-07-toy-tower-defense-step3/specs/core-gameplay/spec.md openspec/specs/core-gameplay/spec.md
+git add openspec/specs/ && git commit -m "docs: 同步规格文档" && git push
+```
