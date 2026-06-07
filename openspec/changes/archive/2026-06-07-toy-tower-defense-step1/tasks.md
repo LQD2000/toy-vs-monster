@@ -8,3 +8,4 @@
 - [x] 1.6 安装必要 Package（Mirror、TextMeshPro、DOTween、New Input System）
 - [x] 1.7 初始化 Git 仓库，配置 .gitignore
 - [x] 1.8 配置 New Input System（替换旧版 Input Manager）
+- [x] 1.9 编写规格文档（project-setup / input-system）
