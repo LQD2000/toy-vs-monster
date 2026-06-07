@@ -1,0 +1,45 @@
+schema: spec-driven
+
+context: |
+  Language: Chinese
+  Write in Chinese, but:
+  - Keep technical terms like "API", "REST", "GraphQL" in English
+  - Code examples and file paths remain in English
+
+  Tech stack: Unity 6.3 LTS (6000.3.x) + C#
+  Rendering: 2.5D (2D sprites + Sorting Layer for depth, similar to PvZ)
+  Input: Unity New Input System (keyboard, mouse, gamepad, touch)
+  Architecture: MonoBehaviour + Component-based
+  Networking: Mirror Networking
+  Save: JSON file (Application.persistentDataPath)
+  Scene: Multi-scene (MainMenu / Game / Loading)
+  Version Control: Git
+  Code Style: Unity official C# conventions
+  Target platforms: Windows, Mac, Linux, iOS, Android, Web
+
+  Rules:
+    proposal:
+       - Keep proposals under 1500 words
+       - Always include a "Non-goals" section
+    
+    tasks:
+       - Break tasks into chunks of max 2 hours
+
+# Project context (optional)
+# This is shown to AI when creating artifacts.
+# Add your tech stack, conventions, style guides, domain knowledge, etc.
+# Example:
+#   context: |
+#     Tech stack: TypeScript, React, Node.js
+#     We use conventional commits
+#     Domain: e-commerce platform
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always include a "Non-goals" section
+#     tasks:
+#       - Break tasks into chunks of max 2 hours

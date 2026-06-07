@@ -1,0 +1,120 @@
+# PROJECT KNOWLEDGE BASE
+
+**Generated:** 2026-06-05
+**Tech Stack:** Unity 6.3 LTS (6000.3.x) + C#
+**Workflow:** OpenSpec (spec-driven)
+
+## OVERVIEW
+AI-game — greenfield project, spec-driven development via OpenSpec. Chinese-language docs, Unity + C# implementation. No code written yet.
+
+## TECH STACK
+
+| 组件 | 选择 | 说明 |
+|------|------|------|
+| 引擎 | Unity 6.3 LTS (6000.3.x) | 当前最新 LTS，支持到 2028 年 |
+| 语言 | C# | Unity 原生支持 |
+| 渲染 | 2.5D | 2D 精灵 + Sorting Layer，类似 PvZ 视角 |
+| 架构 | MonoBehaviour | 组件化设计，非 ECS/DOTS |
+| 输入 | Unity New Input System | 支持键盘、鼠标、手柄、触屏 |
+| 联网 | Mirror Networking | 开源框架，支持 Client-Server |
+| 数据 | ScriptableObject + JSON | 配置数据 + 游戏数据 |
+| 存档 | JSON 文件 | Application.persistentDataPath |
+| 场景 | 多场景架构 | MainMenu / Game / Loading |
+| UI | UI Toolkit | 基于 USS/CSS，响应式布局 |
+| 优化 | 对象池 | 管理弹丸、怪物、电力球等 |
+| 版本控制 | Git | 配置 .gitignore + Git LFS |
+| 代码规范 | Unity 官方 C# 规范 | PascalCase / camelCase / _camelCase |
+| 平台 | 多平台 | Windows/Mac/Linux/iOS/Android/Web |
+
+## STRUCTURE
+```
+./
+├── openspec/                    # Spec-driven workflow (specs, changes, config)
+│   ├── config.yaml              # Project config: Unity + C#, Chinese, proposal/task rules
+│   ├── specs/                   # Main specs (synced from changes)
+│   └── changes/                 # Delta changes
+│       ├── archive/             # Archived changes (YYYY-MM-DD-name)
+│       ├── toy-tower-defense/   # Original change (reference)
+│       └── toy-tower-defense-step{2-22}/  # Split changes (21 steps)
+├── data/                        # Game data (ScriptableObject definitions)
+│   ├── defenders/               # Defender stats and configs
+│   ├── attackers/               # Attacker stats and configs
+│   └── levels/                  # Level configurations
+├── docs/                        # Implementation documentation
+├── .opencode/                   # OpenCode AI tooling (commands, skills, plugin)
+├── game/                        # Unity project
+└── AGENTS.md                    # This file
+```
+
+## WHERE TO LOOK
+| Task | Location | Notes |
+|------|----------|-------|
+| Project config | `openspec/config.yaml` | Language, tech stack, artifact rules |
+| Game design | `openspec/changes/toy-tower-defense/proposal.md` | What & why |
+| Technical design | `openspec/changes/toy-tower-defense/design.md` | How |
+| Task list | `openspec/changes/toy-tower-defense/tasks.md` | Implementation checklist |
+| Specs | `openspec/changes/toy-tower-defense/specs/` | Requirements per capability |
+| Unit data | `data/defenders/` | Defender stats |
+| Attacker data | `data/attackers/` | Attacker stats |
+| Level data | `data/levels/` | Level configs |
+| Implementation docs | `docs/` | Module implementation details |
+| Propose a change | `/opsx-propose` | Creates proposal + design + tasks |
+| Implement changes | `/opsx-apply` | Reads artifacts, implements tasks |
+| Explore/think | `/opsx-explore` | No code writing in this mode |
+| Verify | `/opsx-verify` | Check implementation vs artifacts |
+| Archive | `/opsx-archive` | Date-prefixed: `YYYY-MM-DD-name` |
+
+## CONVENTIONS
+- **Language**: Write docs/outputs in Chinese. Keep technical terms (API, REST, GraphQL) and code/paths in English
+- **Proposals**: Under 1500 words, must include Non-goals section
+- **Tasks**: Max 2 hours per chunk
+- **Spec requirements**: Use SHALL keyword
+- **Change naming**: kebab-case (e.g., `add-user-auth`)
+- **Delta specs**: Section headers ADDED / MODIFIED / REMOVED / RENAMED
+- **Implementation docs**: All development MUST be accompanied by detailed implementation documentation
+
+## IMPLEMENTATION DOCUMENTATION RULE
+
+**所有开发必须同步新增详细实现文档。**
+
+每当实现一个功能或模块时，必须在 `docs/` 目录下创建或更新对应的实现文档，内容包括：
+
+1. **模块概述**：功能描述、职责范围
+2. **类图/结构图**：关键类和它们的关系
+3. **关键实现**：核心算法、设计模式、Unity 组件用法
+4. **配置说明**：Inspector 参数、ScriptableObject 字段
+5. **使用示例**：如何调用、如何配置
+6. **注意事项**：已知限制、性能考量、后续优化方向
+
+文档命名规范：`<模块名>-implementation.md`（如 `lane-system-implementation.md`）
+
+## CODE STYLE
+
+```csharp
+// 类名：PascalCase
+public class GameManager : MonoBehaviour
+
+// 方法名：PascalCase
+public void SpawnEnemy()
+
+// 变量名：camelCase
+private int currentHealth;
+
+// 私有字段：_camelCase
+[SerializeField] private float _moveSpeed;
+
+// 常量：UPPER_SNAKE_CASE
+private const int MAX_HEALTH = 100;
+
+// 接口：I + PascalCase
+public interface IDamageable
+```
+
+## NOTES
+- Git repo will be initialized at project root
+- Unity project will be in `./game/` directory
+- `.opencode/` is tooling only, not application code
+- All implementation must have corresponding documentation in `docs/` folder
+- Original change `toy-tower-defense` is split into 21 steps (`toy-tower-defense-step{2-22}`)
+- Step 1 (project init) is archived in `openspec/changes/archive/2026-06-07-toy-tower-defense-step1/`
+- Use `/opsx-apply` to implement individual steps, `/opsx-archive` to archive completed steps
