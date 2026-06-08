@@ -88,6 +88,74 @@ AI-game — greenfield project, spec-driven development via OpenSpec. Chinese-la
 
 文档命名规范：`<模块名>-implementation.md`（如 `lane-system-implementation.md`）
 
+## UNITY EDITOR 手动步骤文档规则
+
+**无法通过代码创建的 Unity 资源，必须通过 README 文档说明创建步骤。**
+
+Unity 中有些资源只能在 Editor 中手动创建（如 Prefab、Scene、Animation 等），AI 无法直接生成这些二进制资产。对此类资源，必须：
+
+1. **创建目录结构**：在对应位置创建文件夹（如 `game/Assets/Prefabs/Attackers/`）
+2. **编写 README.md**：详细说明手动创建步骤，包括：
+   - 文件位置和命名
+   - 分步操作指南（带编号）
+   - 需要添加的组件及其配置
+   - 属性参考值（来自 `data/` 目录的设计文档）
+   - 注意事项和常见问题
+
+3. **在实现文档中引用**：在 `<模块名>-implementation.md` 中引用 README 的创建步骤
+
+**适用场景**：
+- Prefab 创建（需要拖拽组件、配置 Inspector）
+- Scene 创建（需要设置 Lighting、Build Settings）
+- Animation/Animator Controller（需要在 Animator 窗口编辑）
+- Tilemap Palette（需要在 Tile Palette 窗口创建）
+- Shader Graph（需要可视化编辑器）
+
+**示例结构**：
+```
+game/Assets/Prefabs/
+├── Attackers/
+│   ├── README.md          # DustSprite Prefab 创建指南
+│   └── DustSprite.prefab  # 手动创建（按 README 步骤）
+├── Defenders/
+│   ├── README.md          # 防御者 Prefab 创建指南
+│   └── MarbleShooter.prefab
+└── Projectiles/
+    ├── README.md          # 弹丸 Prefab 创建指南
+    └── Marble.prefab
+```
+
+**文档模板**：
+```markdown
+# [资源名称] 创建指南
+
+## 文件位置
+`game/Assets/Prefabs/[路径]/[名称].prefab`
+
+## 创建步骤
+
+### 1. 在 Unity Editor 中创建
+1. [第一步操作]
+2. [第二步操作]
+...
+
+### 2. 添加组件
+- [组件1]: [配置说明]
+- [组件2]: [配置说明]
+
+### 3. 保存为 Prefab
+1. [保存步骤]
+
+## 属性参考
+| 属性 | 值 | 说明 |
+|------|-----|------|
+| ... | ... | ... |
+
+## 注意事项
+- [注意事项1]
+- [注意事项2]
+```
+
 ## CODE STYLE
 
 ```csharp
