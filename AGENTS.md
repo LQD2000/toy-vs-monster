@@ -5,7 +5,7 @@
 **Workflow:** OpenSpec (spec-driven)
 
 ## OVERVIEW
-AI-game — greenfield project, spec-driven development via OpenSpec. Chinese-language docs, Unity + C# implementation. No code written yet.
+toy-vs-monster — greenfield project, spec-driven development via OpenSpec. Chinese-language docs, Unity + C# implementation. No code written yet.
 
 ## TECH STACK
 

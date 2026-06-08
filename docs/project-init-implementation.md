@@ -5,7 +5,7 @@
 
 ## 项目结构
 ```
-AI-game/
+toy-vs-monster/
 ├── .gitignore                # Git 忽略规则
 ├── AGENTS.md                 # 项目知识库
 ├── openspec/                 # OpenSpec 工作流文档
@@ -65,8 +65,8 @@ AI-game/
 - **分辨率**: 1920x1080 (默认)
 - **色彩空间**: Gamma
 - **公司名**: DefaultCompany
-- **产品名**: AI-game
-- **应用标识**: com.DefaultCompany.AI-game
+- **产品名**: toy-vs-monster
+- **应用标识**: com.DefaultCompany.toy-vs-monster
 
 ### Input System 配置
 - **版本**: com.unity.inputsystem 1.19.0

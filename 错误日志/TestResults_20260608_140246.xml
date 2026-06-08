@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="131" result="Failed(Child)" total="131" passed="127" failed="4" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.2869126">
+  <test-suite type="TestSuite" id="1152" name="toy-vs-monster" fullname="toy-vs-monster" runstate="Runnable" testcasecount="131" result="Failed" site="Child" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.286913" total="131" passed="127" failed="4" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1149" name="Assembly-CSharp-Editor.dll" fullname="/Users/grape/ProjectSpace/toy-vs-monster/game/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="131" result="Failed" site="Child" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.281800" total="131" passed="127" failed="4" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="3905" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1001" name="AttackerMovementTests" fullname="AttackerMovementTests" classname="AttackerMovementTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.024709" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1007" name="CurrentLane_ShouldReturnInitializedLane" fullname="AttackerMovementTests.CurrentLane_ShouldReturnInitializedLane" methodname="CurrentLane_ShouldReturnInitializedLane" classname="AttackerMovementTests" runstate="Runnable" seed="399791180" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.010174" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1003" name="Initialize_ShouldCalculateTargetX" fullname="AttackerMovementTests.Initialize_ShouldCalculateTargetX" methodname="Initialize_ShouldCalculateTargetX" classname="AttackerMovementTests" runstate="Runnable" seed="2567893" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001060" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1002" name="Initialize_ShouldSetLaneAndSpeed" fullname="AttackerMovementTests.Initialize_ShouldSetLaneAndSpeed" methodname="Initialize_ShouldSetLaneAndSpeed" classname="AttackerMovementTests" runstate="Runnable" seed="27872181" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000559" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1009" name="IsMoving_ShouldBeFalseAfterStop" fullname="AttackerMovementTests.IsMoving_ShouldBeFalseAfterStop" methodname="IsMoving_ShouldBeFalseAfterStop" classname="AttackerMovementTests" runstate="Runnable" seed="2090232134" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000631" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1008" name="IsMoving_ShouldBeTrueAfterInitialize" fullname="AttackerMovementTests.IsMoving_ShouldBeTrueAfterInitialize" methodname="IsMoving_ShouldBeTrueAfterInitialize" classname="AttackerMovementTests" runstate="Runnable" seed="34551136" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000445" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1006" name="Movement_ShouldMoveLeft" fullname="AttackerMovementTests.Movement_ShouldMoveLeft" methodname="Movement_ShouldMoveLeft" classname="AttackerMovementTests" runstate="Runnable" seed="1502993148" result="Failed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.002961" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: less than 0.0f
+  But was:  0.0f
+]]></message>
+            <stack-trace><![CDATA[at AttackerMovementTests.Movement_ShouldMoveLeft () [0x00037] in /Users/grape/ProjectSpace/toy-vs-monster/game/Assets/Tests/Editor/AttackerMovementTests.cs:78
+]]></stack-trace>
+          </failure>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1004" name="Stop_ShouldStopMovement" fullname="AttackerMovementTests.Stop_ShouldStopMovement" methodname="Stop_ShouldStopMovement" classname="AttackerMovementTests" runstate="Runnable" seed="169672834" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000447" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1005" name="Update_WhenNotMoving_ShouldNotChangePosition" fullname="AttackerMovementTests.Update_WhenNotMoving_ShouldNotChangePosition" methodname="Update_WhenNotMoving_ShouldNotChangePosition" classname="AttackerMovementTests" runstate="Runnable" seed="143077143" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000999" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1010" name="AttackerSpawnerTests" fullname="AttackerSpawnerTests" classname="AttackerSpawnerTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.007964" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1012" name="AddSpawnEntry_ShouldAddToTimeline" fullname="AttackerSpawnerTests.AddSpawnEntry_ShouldAddToTimeline" methodname="AddSpawnEntry_ShouldAddToTimeline" classname="AttackerSpawnerTests" runstate="Runnable" seed="79788385" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001205" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1011" name="Instance_ShouldBeSingleton" fullname="AttackerSpawnerTests.Instance_ShouldBeSingleton" methodname="Instance_ShouldBeSingleton" classname="AttackerSpawnerTests" runstate="Runnable" seed="1014103921" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001133" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1017" name="OnAttackerSpawned_Event_ShouldBeInvoked" fullname="AttackerSpawnerTests.OnAttackerSpawned_Event_ShouldBeInvoked" methodname="OnAttackerSpawned_Event_ShouldBeInvoked" classname="AttackerSpawnerTests" runstate="Runnable" seed="842045639" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000171" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1014" name="SetTimeline_Null_ShouldCreateEmptyTimeline" fullname="AttackerSpawnerTests.SetTimeline_Null_ShouldCreateEmptyTimeline" methodname="SetTimeline_Null_ShouldCreateEmptyTimeline" classname="AttackerSpawnerTests" runstate="Runnable" seed="91168656" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000154" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1013" name="SetTimeline_ShouldReplaceTimeline" fullname="AttackerSpawnerTests.SetTimeline_ShouldReplaceTimeline" methodname="SetTimeline_ShouldReplaceTimeline" classname="AttackerSpawnerTests" runstate="Runnable" seed="1014102122" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000185" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1015" name="StartSpawning_ShouldSetSpawningState" fullname="AttackerSpawnerTests.StartSpawning_ShouldSetSpawningState" methodname="StartSpawning_ShouldSetSpawningState" classname="AttackerSpawnerTests" runstate="Runnable" seed="2013260136" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000462" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[AttackerSpawner] 开始生成怪物
+]]></output>
+        </test-case>
+        <test-case id="1016" name="StopSpawning_ShouldStopSpawningState" fullname="AttackerSpawnerTests.StopSpawning_ShouldStopSpawningState" methodname="StopSpawning_ShouldStopSpawningState" classname="AttackerSpawnerTests" runstate="Runnable" seed="1708440388" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000630" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[AttackerSpawner] 开始生成怪物
+[AttackerSpawner] 停止生成怪物
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1018" name="AttackerTests" fullname="AttackerTests" classname="AttackerTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.008650" total="8" passed="5" failed="3" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1026" name="CurrentLane_ShouldReturnInitializedLane" fullname="AttackerTests.CurrentLane_ShouldReturnInitializedLane" methodname="CurrentLane_ShouldReturnInitializedLane" classname="AttackerTests" runstate="Runnable" seed="499188588" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000746" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1025" name="Data_ShouldReturnInitializedData" fullname="AttackerTests.Data_ShouldReturnInitializedData" methodname="Data_ShouldReturnInitializedData" classname="AttackerTests" runstate="Runnable" seed="1965368002" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000175" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1023" name="Die_ShouldFireOnAttackerDeadEvent" fullname="AttackerTests.Die_ShouldFireOnAttackerDeadEvent" methodname="Die_ShouldFireOnAttackerDeadEvent" classname="AttackerTests" runstate="Runnable" seed="1429262370" result="Failed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001886" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[Expected log did not appear: [Log] [Attacker] 怪物死亡: TestAttackerData (Lane: 0)]]></message>
+          </failure>
+          <output><![CDATA[[Attacker] 怪物死亡: New Attacker (Lane: 0)
+]]></output>
+        </test-case>
+        <test-case id="1019" name="Initialize_ShouldSetHealthAndLane" fullname="AttackerTests.Initialize_ShouldSetHealthAndLane" methodname="Initialize_ShouldSetHealthAndLane" classname="AttackerTests" runstate="Runnable" seed="103943424" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000227" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1024" name="MultipleDamage_ShouldAccumulateCorrectly" fullname="AttackerTests.MultipleDamage_ShouldAccumulateCorrectly" methodname="MultipleDamage_ShouldAccumulateCorrectly" classname="AttackerTests" runstate="Runnable" seed="332773217" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000115" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1021" name="TakeDamage_ExactKill_ShouldDie" fullname="AttackerTests.TakeDamage_ExactKill_ShouldDie" methodname="TakeDamage_ExactKill_ShouldDie" classname="AttackerTests" runstate="Runnable" seed="584222504" result="Failed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000381" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[Expected log did not appear: [Log] [Attacker] 怪物死亡: TestAttackerData (Lane: 0)]]></message>
+          </failure>
+          <output><![CDATA[[Attacker] 怪物死亡: New Attacker (Lane: 0)
+]]></output>
+        </test-case>
+        <test-case id="1020" name="TakeDamage_ShouldReduceHealth" fullname="AttackerTests.TakeDamage_ShouldReduceHealth" methodname="TakeDamage_ShouldReduceHealth" classname="AttackerTests" runstate="Runnable" seed="1133924692" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000101" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1022" name="TakeDamage_WhenDead_ShouldNotChangeHealth" fullname="AttackerTests.TakeDamage_WhenDead_ShouldNotChangeHealth" methodname="TakeDamage_WhenDead_ShouldNotChangeHealth" classname="AttackerTests" runstate="Runnable" seed="1322732279" result="Failed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000345" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[Expected log did not appear: [Log] [Attacker] 怪物死亡: TestAttackerData (Lane: 0)]]></message>
+          </failure>
+          <output><![CDATA[[Attacker] 怪物死亡: New Attacker (Lane: 0)
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1027" name="DefenderDataTests" fullname="DefenderDataTests" classname="DefenderDataTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.027865" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1029" name="AttackType_Enum_ShouldHaveThreeValues" fullname="DefenderDataTests.AttackType_Enum_ShouldHaveThreeValues" methodname="AttackType_Enum_ShouldHaveThreeValues" classname="DefenderDataTests" runstate="Runnable" seed="1366409098" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000185" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1028" name="CreateInstance_ShouldHaveDefaultValues" fullname="DefenderDataTests.CreateInstance_ShouldHaveDefaultValues" methodname="CreateInstance_ShouldHaveDefaultValues" classname="DefenderDataTests" runstate="Runnable" seed="1342453977" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000611" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1030" name="DefenderFactoryTests" fullname="DefenderFactoryTests" classname="DefenderFactoryTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.010838" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1031" name="CreateDefender_WithNullData_ShouldReturnNull" fullname="DefenderFactoryTests.CreateDefender_WithNullData_ShouldReturnNull" methodname="CreateDefender_WithNullData_ShouldReturnNull" classname="DefenderFactoryTests" runstate="Runnable" seed="841149531" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001469" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[DefenderFactory] DefenderData 或 Prefab 为空
+]]></output>
+        </test-case>
+        <test-case id="1032" name="CreateDefender_WithNullPrefab_ShouldReturnNull" fullname="DefenderFactoryTests.CreateDefender_WithNullPrefab_ShouldReturnNull" methodname="CreateDefender_WithNullPrefab_ShouldReturnNull" classname="DefenderFactoryTests" runstate="Runnable" seed="1945303655" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001177" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[DefenderFactory] DefenderData 或 Prefab 为空
+]]></output>
+        </test-case>
+        <test-case id="1034" name="CreateDefender_WithoutDefenderComponent_ShouldReturnNull" fullname="DefenderFactoryTests.CreateDefender_WithoutDefenderComponent_ShouldReturnNull" methodname="CreateDefender_WithoutDefenderComponent_ShouldReturnNull" classname="DefenderFactoryTests" runstate="Runnable" seed="234406028" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001608" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[DefenderFactory] Prefab 上没有 Defender 组件
+]]></output>
+        </test-case>
+        <test-case id="1033" name="CreateDefender_WithValidData_ShouldReturnDefender" fullname="DefenderFactoryTests.CreateDefender_WithValidData_ShouldReturnDefender" methodname="CreateDefender_WithValidData_ShouldReturnDefender" classname="DefenderFactoryTests" runstate="Runnable" seed="972378815" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.003004" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1035" name="GetAvailableDefenders_ShouldReturnArray" fullname="DefenderFactoryTests.GetAvailableDefenders_ShouldReturnArray" methodname="GetAvailableDefenders_ShouldReturnArray" classname="DefenderFactoryTests" runstate="Runnable" seed="1563751650" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000551" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1036" name="DefenderTests" fullname="DefenderTests" classname="DefenderTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.009703" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1041" name="Die_ShouldFireOnDefenderDeadEvent" fullname="DefenderTests.Die_ShouldFireOnDefenderDeadEvent" methodname="Die_ShouldFireOnDefenderDeadEvent" classname="DefenderTests" runstate="Runnable" seed="705646738" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000707" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1037" name="Initialize_ShouldSetHealthAndPosition" fullname="DefenderTests.Initialize_ShouldSetHealthAndPosition" methodname="Initialize_ShouldSetHealthAndPosition" classname="DefenderTests" runstate="Runnable" seed="296460951" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000383" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1042" name="MultipleDamage_ShouldAccumulateCorrectly" fullname="DefenderTests.MultipleDamage_ShouldAccumulateCorrectly" methodname="MultipleDamage_ShouldAccumulateCorrectly" classname="DefenderTests" runstate="Runnable" seed="1081400301" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000162" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1039" name="TakeDamage_ExactKill_ShouldDie" fullname="DefenderTests.TakeDamage_ExactKill_ShouldDie" methodname="TakeDamage_ExactKill_ShouldDie" classname="DefenderTests" runstate="Runnable" seed="1622448818" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000097" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1038" name="TakeDamage_ShouldReduceHealth" fullname="DefenderTests.TakeDamage_ShouldReduceHealth" methodname="TakeDamage_ShouldReduceHealth" classname="DefenderTests" runstate="Runnable" seed="1539873848" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000087" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1040" name="TakeDamage_WhenDead_ShouldNotChangeHealth" fullname="DefenderTests.TakeDamage_WhenDead_ShouldNotChangeHealth" methodname="TakeDamage_WhenDead_ShouldNotChangeHealth" classname="DefenderTests" runstate="Runnable" seed="1821575616" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000093" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1043" name="EnemyTests" fullname="EnemyTests" classname="EnemyTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.013944" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1049" name="Die_ShouldFireOnEnemyDeadEvent" fullname="EnemyTests.Die_ShouldFireOnEnemyDeadEvent" methodname="Die_ShouldFireOnEnemyDeadEvent" classname="EnemyTests" runstate="Runnable" seed="645000179" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001061" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[Enemy] 敌人死亡 (Row: 0)
+]]></output>
+        </test-case>
+        <test-case id="1044" name="InitialHealth_ShouldEqualMaxHealth" fullname="EnemyTests.InitialHealth_ShouldEqualMaxHealth" methodname="InitialHealth_ShouldEqualMaxHealth" classname="EnemyTests" runstate="Runnable" seed="520159848" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000103" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1045" name="Initialize_ShouldSetHealthAndRow" fullname="EnemyTests.Initialize_ShouldSetHealthAndRow" methodname="Initialize_ShouldSetHealthAndRow" classname="EnemyTests" runstate="Runnable" seed="1362252994" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000192" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1047" name="TakeDamage_ExactKill_ShouldDie" fullname="EnemyTests.TakeDamage_ExactKill_ShouldDie" methodname="TakeDamage_ExactKill_ShouldDie" classname="EnemyTests" runstate="Runnable" seed="429518563" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000778" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[Enemy] 敌人死亡 (Row: 0)
+]]></output>
+        </test-case>
+        <test-case id="1046" name="TakeDamage_ShouldReduceHealth" fullname="EnemyTests.TakeDamage_ShouldReduceHealth" methodname="TakeDamage_ShouldReduceHealth" classname="EnemyTests" runstate="Runnable" seed="1559165500" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000251" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1048" name="TakeDamage_WhenDead_ShouldNotReduceHealth" fullname="EnemyTests.TakeDamage_WhenDead_ShouldNotReduceHealth" methodname="TakeDamage_WhenDead_ShouldNotReduceHealth" classname="EnemyTests" runstate="Runnable" seed="875785326" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001766" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[Enemy] 敌人死亡 (Row: 0)
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1050" name="EventSystemTests" fullname="EventSystemTests" classname="EventSystemTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.016885" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1061" name="Clear_ShouldRemoveEvent" fullname="EventSystemTests.Clear_ShouldRemoveEvent" methodname="Clear_ShouldRemoveEvent" classname="EventSystemTests" runstate="Runnable" seed="1537670063" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000885" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1062" name="ClearAll_ShouldRemoveAllEvents" fullname="EventSystemTests.ClearAll_ShouldRemoveAllEvents" methodname="ClearAll_ShouldRemoveAllEvents" classname="EventSystemTests" runstate="Runnable" seed="1784039270" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000203" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1063" name="DuplicateSubscription_ShouldCallTwice" fullname="EventSystemTests.DuplicateSubscription_ShouldCallTwice" methodname="DuplicateSubscription_ShouldCallTwice" classname="EventSystemTests" runstate="Runnable" seed="1979105340" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000872" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1053" name="Emit_NoSubscribers_ShouldNotThrow" fullname="EventSystemTests.Emit_NoSubscribers_ShouldNotThrow" methodname="Emit_NoSubscribers_ShouldNotThrow" classname="EventSystemTests" runstate="Runnable" seed="1807127310" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000687" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1054" name="Emit_WithParameter_NoSubscribers_ShouldNotThrow" fullname="EventSystemTests.Emit_WithParameter_NoSubscribers_ShouldNotThrow" methodname="Emit_WithParameter_NoSubscribers_ShouldNotThrow" classname="EventSystemTests" runstate="Runnable" seed="313836935" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000931" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1060" name="ExceptionInCallback_ShouldNotBlockOtherCallbacks" fullname="EventSystemTests.ExceptionInCallback_ShouldNotBlockOtherCallbacks" methodname="ExceptionInCallback_ShouldNotBlockOtherCallbacks" classname="EventSystemTests" runstate="Runnable" seed="906961454" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.002039" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[EventSystem] 事件 'ErrorEvent' 回调异常: Test failure
+]]></output>
+        </test-case>
+        <test-case id="1055" name="MultipleSubscribers_ShouldAllBeCalled" fullname="EventSystemTests.MultipleSubscribers_ShouldAllBeCalled" methodname="MultipleSubscribers_ShouldAllBeCalled" classname="EventSystemTests" runstate="Runnable" seed="1526116905" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000313" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1051" name="SubscribeAndEmit_ShouldInvokeCallback" fullname="EventSystemTests.SubscribeAndEmit_ShouldInvokeCallback" methodname="SubscribeAndEmit_ShouldInvokeCallback" classname="EventSystemTests" runstate="Runnable" seed="270216811" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000147" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1052" name="SubscribeAndEmit_WithParameter_ShouldPassCorrectValue" fullname="EventSystemTests.SubscribeAndEmit_WithParameter_ShouldPassCorrectValue" methodname="SubscribeAndEmit_WithParameter_ShouldPassCorrectValue" classname="EventSystemTests" runstate="Runnable" seed="549418438" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000344" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1059" name="Unsubscribe_Generic_ShouldStopTypedCallback" fullname="EventSystemTests.Unsubscribe_Generic_ShouldStopTypedCallback" methodname="Unsubscribe_Generic_ShouldStopTypedCallback" classname="EventSystemTests" runstate="Runnable" seed="721676387" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000371" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1058" name="Unsubscribe_NonExistentCallback_ShouldNotThrow" fullname="EventSystemTests.Unsubscribe_NonExistentCallback_ShouldNotThrow" methodname="Unsubscribe_NonExistentCallback_ShouldNotThrow" classname="EventSystemTests" runstate="Runnable" seed="1786526302" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000171" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1057" name="Unsubscribe_ShouldNotAffectOtherSubscribers" fullname="EventSystemTests.Unsubscribe_ShouldNotAffectOtherSubscribers" methodname="Unsubscribe_ShouldNotAffectOtherSubscribers" classname="EventSystemTests" runstate="Runnable" seed="277846460" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000134" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1056" name="Unsubscribe_ShouldStopCallback" fullname="EventSystemTests.Unsubscribe_ShouldStopCallback" methodname="Unsubscribe_ShouldStopCallback" classname="EventSystemTests" runstate="Runnable" seed="548042491" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000103" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1064" name="GameManagerTests" fullname="GameManagerTests" classname="GameManagerTests" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.014478" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1078" name="FullLifecycle_PreparationToDefeat" fullname="GameManagerTests.FullLifecycle_PreparationToDefeat" methodname="FullLifecycle_PreparationToDefeat" classname="GameManagerTests" runstate="Runnable" seed="1166885767" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001164" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GameManager] 状态变更: Preparation -> InProgress
+[GameManager] 状态变更: InProgress -> Defeat
+]]></output>
+        </test-case>
+        <test-case id="1077" name="FullLifecycle_PreparationToVictory" fullname="GameManagerTests.FullLifecycle_PreparationToVictory" methodname="FullLifecycle_PreparationToVictory" classname="GameManagerTests" runstate="Runnable" seed="889782249" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000624" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GameManager] 状态变更: Preparation -> InProgress
+[GameManager] 状态变更: InProgress -> Victory
+]]></output>
+        </test-case>
+        <test-case id="1065" name="InitialState_ShouldBePreparation" fullname="GameManagerTests.InitialState_ShouldBePreparation" methodname="InitialState_ShouldBePreparation" classname="GameManagerTests" runstate="Runnable" seed="1102574928" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000083" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1070" name="LoseGame_FromInProgress_ShouldTransitionToDefeat" fullname="GameManagerTests.LoseGame_FromInProgress_ShouldTransitionToDefeat" methodname="LoseGame_FromInProgress_ShouldTransitionToDefeat" classname="GameManagerTests" runstate="Runnable" seed="1275007167" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000527" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GameManager] 状态变更: Preparation -> InProgress
+[GameManager] 状态变更: InProgress -> Defeat
+]]></output>
+        </test-case>
+        <test-case id="1071" name="LoseGame_NotFromInProgress_ShouldNotChangeState" fullname="GameManagerTests.LoseGame_NotFromInProgress_ShouldNotChangeState" methodname="LoseGame_NotFromInProgress_ShouldNotChangeState" classname="GameManagerTests" runstate="Runnable" seed="1359841574" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000302" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GameManager] 只有在游戏进行中才能判定失败
+]]></output>
+        </test-case>
+        <test-case id="1073" name="ResetGame_FromVictory_ShouldTransitionToPreparation" fullname="GameManagerTests.ResetGame_FromVictory_ShouldTransitionToPreparation" methodname="ResetGame_FromVictory_ShouldTransitionToPreparation" classname="GameManagerTests" runstate="Runnable" seed="1809425493" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000734" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GameManager] 状态变更: Preparation -> InProgress
+[GameManager] 状态变更: InProgress -> Victory
+[GameManager] 状态变更: Victory -> Preparation
+]]></output>
+        </test-case>
+        <test-case id="1072" name="ResetGame_ShouldTransitionToPreparation" fullname="GameManagerTests.ResetGame_ShouldTransitionToPreparation" methodname="ResetGame_ShouldTransitionToPreparation" classname="GameManagerTests" runstate="Runnable" seed="1847426013" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000508" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GameManager] 状态变更: Preparation -> InProgress
+[GameManager] 状态变更: InProgress -> Preparation
+]]></output>
+        </test-case>
+        <test-case id="1076" name="SetSameState_ShouldNotChangeState" fullname="GameManagerTests.SetSameState_ShouldNotChangeState" methodname="SetSameState_ShouldNotChangeState" classname="GameManagerTests" runstate="Runnable" seed="843833238" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000088" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1075" name="SetSameState_ShouldNotFireEvent" fullname="GameManagerTests.SetSameState_ShouldNotFireEvent" methodname="SetSameState_ShouldNotFireEvent" classname="GameManagerTests" runstate="Runnable" seed="1637651044" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000176" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1079" name="SetState_ManualTransition_ShouldWork" fullname="GameManagerTests.SetState_ManualTransition_ShouldWork" methodname="SetState_ManualTransition_ShouldWork" classname="GameManagerTests" runstate="Runnable" seed="1375534221" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000320" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GameManager] 状态变更: Preparation -> Victory
+]]></output>
+        </test-case>
+        <test-case id="1066" name="StartGame_FromPreparation_ShouldTransitionToInProgress" fullname="GameManagerTests.StartGame_FromPreparation_ShouldTransitionToInProgress" methodname="StartGame_FromPreparation_ShouldTransitionToInProgress" classname="GameManagerTests" runstate="Runnable" seed="467681271" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000299" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GameManager] 状态变更: Preparation -> InProgress
+]]></output>
+        </test-case>
+        <test-case id="1067" name="StartGame_NotFromPreparation_ShouldNotChangeState" fullname="GameManagerTests.StartGame_NotFromPreparation_ShouldNotChangeState" methodname="StartGame_NotFromPreparation_ShouldNotChangeState" classname="GameManagerTests" runstate="Runnable" seed="834544141" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000487" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GameManager] 状态变更: Preparation -> InProgress
+[GameManager] 只能在准备阶段开始游戏
+]]></output>
+        </test-case>
+        <test-case id="1074" name="StateChange_ShouldFireEvent_WithCorrectOldAndNewStates" fullname="GameManagerTests.StateChange_ShouldFireEvent_WithCorrectOldAndNewStates" methodname="StateChange_ShouldFireEvent_WithCorrectOldAndNewStates" classname="GameManagerTests" runstate="Runnable" seed="2069654992" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000382" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GameManager] 状态变更: Preparation -> InProgress
+]]></output>
+        </test-case>
+        <test-case id="1068" name="WinGame_FromInProgress_ShouldTransitionToVictory" fullname="GameManagerTests.WinGame_FromInProgress_ShouldTransitionToVictory" methodname="WinGame_FromInProgress_ShouldTransitionToVictory" classname="GameManagerTests" runstate="Runnable" seed="1411452725" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000513" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GameManager] 状态变更: Preparation -> InProgress
+[GameManager] 状态变更: InProgress -> Victory
+]]></output>
+        </test-case>
+        <test-case id="1069" name="WinGame_NotFromInProgress_ShouldNotChangeState" fullname="GameManagerTests.WinGame_NotFromInProgress_ShouldNotChangeState" methodname="WinGame_NotFromInProgress_ShouldNotChangeState" classname="GameManagerTests" runstate="Runnable" seed="1684059030" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000302" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GameManager] 只有在游戏进行中才能判定胜利
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1080" name="GridSystemTests" fullname="GridSystemTests" classname="GridSystemTests" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.043002" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1094" name="GetOccupiedCols_EmptyRow_ShouldReturnEmptyList" fullname="GridSystemTests.GetOccupiedCols_EmptyRow_ShouldReturnEmptyList" methodname="GetOccupiedCols_EmptyRow_ShouldReturnEmptyList" classname="GridSystemTests" runstate="Runnable" seed="1692715105" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000886" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1093" name="GetOccupiedCols_ShouldReturnCorrectIndices" fullname="GridSystemTests.GetOccupiedCols_ShouldReturnCorrectIndices" methodname="GetOccupiedCols_ShouldReturnCorrectIndices" classname="GridSystemTests" runstate="Runnable" seed="1600996069" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.002359" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[GridSystem] 格子 (1, 0) 被占用: Occupant0
+[GridSystem] 格子 (1, 5) 被占用: Occupant5
+]]></output>
+        </test-case>
+        <test-case id="1082" name="GridToWorld_Row0Col0_ShouldReturnCenterOfFirstCell" fullname="GridSystemTests.GridToWorld_Row0Col0_ShouldReturnCenterOfFirstCell" methodname="GridToWorld_Row0Col0_ShouldReturnCenterOfFirstCell" classname="GridSystemTests" runstate="Runnable" seed="1254737825" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001520" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1083" name="GridToWorld_Row1Col2_ShouldOffsetCorrectly" fullname="GridSystemTests.GridToWorld_Row1Col2_ShouldOffsetCorrectly" methodname="GridToWorld_Row1Col2_ShouldOffsetCorrectly" classname="GridSystemTests" runstate="Runnable" seed="1515373417" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000750" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1081" name="InitialState_ShouldHaveCorrectDimensions" fullname="GridSystemTests.InitialState_ShouldHaveCorrectDimensions" methodname="InitialState_ShouldHaveCorrectDimensions" classname="GridSystemTests" runstate="Runnable" seed="700136879" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000716" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1090" name="IsCellOccupied_OutOfBounds_ShouldReturnTrue" fullname="GridSystemTests.IsCellOccupied_OutOfBounds_ShouldReturnTrue" methodname="IsCellOccupied_OutOfBounds_ShouldReturnTrue" classname="GridSystemTests" runstate="Runnable" seed="1625829771" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.002798" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[GridSystem] 检查占用超出范围: (-1, 0)
+[GridSystem] 检查占用超出范围: (0, -1)
+[GridSystem] 检查占用超出范围: (5, 0)
+[GridSystem] 检查占用超出范围: (0, 10)
+]]></output>
+        </test-case>
+        <test-case id="1086" name="OccupyCell_EmptyCell_ShouldReturnTrue" fullname="GridSystemTests.OccupyCell_EmptyCell_ShouldReturnTrue" methodname="OccupyCell_EmptyCell_ShouldReturnTrue" classname="GridSystemTests" runstate="Runnable" seed="1377366031" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001299" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[GridSystem] 格子 (0, 0) 被占用: TestOccupant
+]]></output>
+        </test-case>
+        <test-case id="1087" name="OccupyCell_OccupiedCell_ShouldReturnFalse" fullname="GridSystemTests.OccupyCell_OccupiedCell_ShouldReturnFalse" methodname="OccupyCell_OccupiedCell_ShouldReturnFalse" classname="GridSystemTests" runstate="Runnable" seed="1017643373" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.002738" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[GridSystem] 格子 (0, 0) 被占用: Occupant1
+[GridSystem] 格子 (0, 0) 已被占用
+]]></output>
+        </test-case>
+        <test-case id="1088" name="OccupyCell_OutOfBounds_ShouldReturnFalse" fullname="GridSystemTests.OccupyCell_OutOfBounds_ShouldReturnFalse" methodname="OccupyCell_OutOfBounds_ShouldReturnFalse" classname="GridSystemTests" runstate="Runnable" seed="1341590337" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001064" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[GridSystem] 占用格子超出范围: (-1, 0)
+]]></output>
+        </test-case>
+        <test-case id="1089" name="ReleaseCell_OccupiedCell_ShouldClearOccupation" fullname="GridSystemTests.ReleaseCell_OccupiedCell_ShouldClearOccupation" methodname="ReleaseCell_OccupiedCell_ShouldClearOccupation" classname="GridSystemTests" runstate="Runnable" seed="32661903" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001646" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[GridSystem] 格子 (1, 1) 被占用: TestOccupant
+[GridSystem] 释放格子 (1, 1)
+]]></output>
+        </test-case>
+        <test-case id="1092" name="ReleaseRow_OutOfBounds_ShouldNotThrow" fullname="GridSystemTests.ReleaseRow_OutOfBounds_ShouldNotThrow" methodname="ReleaseRow_OutOfBounds_ShouldNotThrow" classname="GridSystemTests" runstate="Runnable" seed="264479270" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.002207" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[GridSystem] 释放行超出范围: -1
+[GridSystem] 释放行超出范围: 5
+]]></output>
+        </test-case>
+        <test-case id="1091" name="ReleaseRow_ShouldClearAllCellsInRow" fullname="GridSystemTests.ReleaseRow_ShouldClearAllCellsInRow" methodname="ReleaseRow_ShouldClearAllCellsInRow" classname="GridSystemTests" runstate="Runnable" seed="839986841" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001490" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[GridSystem] 格子 (2, 0) 被占用: Occupant0
+[GridSystem] 格子 (2, 5) 被占用: Occupant1
+[GridSystem] 已释放第 2 行所有格子
+]]></output>
+        </test-case>
+        <test-case id="1085" name="WorldToGrid_OutOfBounds_ShouldReturnNull" fullname="GridSystemTests.WorldToGrid_OutOfBounds_ShouldReturnNull" methodname="WorldToGrid_OutOfBounds_ShouldReturnNull" classname="GridSystemTests" runstate="Runnable" seed="830297496" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000800" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1084" name="WorldToGrid_ValidPosition_ShouldReturnCorrectCell" fullname="GridSystemTests.WorldToGrid_ValidPosition_ShouldReturnCorrectCell" methodname="WorldToGrid_ValidPosition_ShouldReturnCorrectCell" classname="GridSystemTests" runstate="Runnable" seed="951304776" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000483" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1095" name="LaneCarTests" fullname="LaneCarTests" classname="LaneCarTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.011453" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1096" name="InitialState_ShouldNotBeTriggered" fullname="LaneCarTests.InitialState_ShouldNotBeTriggered" methodname="InitialState_ShouldNotBeTriggered" classname="LaneCarTests" runstate="Runnable" seed="1705993008" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001170" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[LaneManager] 跑道管理器初始化, 跑道数量: 1
+]]></output>
+        </test-case>
+        <test-case id="1099" name="Trigger_CalledTwice_ShouldNotThrow" fullname="LaneCarTests.Trigger_CalledTwice_ShouldNotThrow" methodname="Trigger_CalledTwice_ShouldNotThrow" classname="LaneCarTests" runstate="Runnable" seed="1811959460" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.002611" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[LaneManager] 跑道管理器初始化, 跑道数量: 1
+[LaneManager] 跑道 0 小车已注册
+[LaneCar] 小车 0 触发！清除跑道全部怪物
+[LaneManager] 跑道 0 已清除
+[LaneCar] 小车 0 已被触发，忽略重复触发
+]]></output>
+        </test-case>
+        <test-case id="1100" name="Trigger_CalledTwice_ShouldOnlyTriggerOnce" fullname="LaneCarTests.Trigger_CalledTwice_ShouldOnlyTriggerOnce" methodname="Trigger_CalledTwice_ShouldOnlyTriggerOnce" classname="LaneCarTests" runstate="Runnable" seed="1607036696" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001282" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[LaneManager] 跑道管理器初始化, 跑道数量: 1
+[LaneManager] 跑道 0 小车已注册
+[LaneCar] 小车 0 触发！清除跑道全部怪物
+[LaneManager] 跑道 0 已清除
+[LaneCar] 小车 0 已被触发，忽略重复触发
+]]></output>
+        </test-case>
+        <test-case id="1098" name="Trigger_ShouldFireOnCarTriggeredEvent" fullname="LaneCarTests.Trigger_ShouldFireOnCarTriggeredEvent" methodname="Trigger_ShouldFireOnCarTriggeredEvent" classname="LaneCarTests" runstate="Runnable" seed="1340119830" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001034" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[LaneManager] 跑道管理器初始化, 跑道数量: 1
+[LaneManager] 跑道 0 小车已注册
+[LaneCar] 小车 0 触发！清除跑道全部怪物
+[LaneManager] 跑道 0 已清除
+]]></output>
+        </test-case>
+        <test-case id="1097" name="Trigger_ShouldSetIsTriggeredToTrue" fullname="LaneCarTests.Trigger_ShouldSetIsTriggeredToTrue" methodname="Trigger_ShouldSetIsTriggeredToTrue" classname="LaneCarTests" runstate="Runnable" seed="1597945680" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000962" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[LaneManager] 跑道管理器初始化, 跑道数量: 1
+[LaneManager] 跑道 0 小车已注册
+[LaneCar] 小车 0 触发！清除跑道全部怪物
+[LaneManager] 跑道 0 已清除
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1101" name="LaneManagerTests" fullname="LaneManagerTests" classname="LaneManagerTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.014700" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1108" name="ClearLane_ShouldNotThrow" fullname="LaneManagerTests.ClearLane_ShouldNotThrow" methodname="ClearLane_ShouldNotThrow" classname="LaneManagerTests" runstate="Runnable" seed="898168194" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001601" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[LaneManager] 跑道管理器初始化, 跑道数量: 1
+[GridSystem] 已释放第 0 行所有格子
+[LaneManager] 跑道 0 已清除
+]]></output>
+        </test-case>
+        <test-case id="1109" name="GetCarPosition_ShouldReturnPositionLeftOfFirstCell" fullname="LaneManagerTests.GetCarPosition_ShouldReturnPositionLeftOfFirstCell" methodname="GetCarPosition_ShouldReturnPositionLeftOfFirstCell" classname="LaneManagerTests" runstate="Runnable" seed="1780383255" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000637" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[LaneManager] 跑道管理器初始化, 跑道数量: 1
+]]></output>
+        </test-case>
+        <test-case id="1110" name="GetLaneBounds_ShouldReturnCorrectRange" fullname="LaneManagerTests.GetLaneBounds_ShouldReturnCorrectRange" methodname="GetLaneBounds_ShouldReturnCorrectRange" classname="LaneManagerTests" runstate="Runnable" seed="1595069596" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000703" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[LaneManager] 跑道管理器初始化, 跑道数量: 1
+]]></output>
+        </test-case>
+        <test-case id="1102" name="InitialState_ShouldHaveLaneCount1" fullname="LaneManagerTests.InitialState_ShouldHaveLaneCount1" methodname="InitialState_ShouldHaveLaneCount1" classname="LaneManagerTests" runstate="Runnable" seed="1197722410" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000527" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[LaneManager] 跑道管理器初始化, 跑道数量: 1
+]]></output>
+        </test-case>
+        <test-case id="1105" name="IsCarAvailable_NoCar_ShouldReturnFalse" fullname="LaneManagerTests.IsCarAvailable_NoCar_ShouldReturnFalse" methodname="IsCarAvailable_NoCar_ShouldReturnFalse" classname="LaneManagerTests" runstate="Runnable" seed="1141411843" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000543" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[LaneManager] 跑道管理器初始化, 跑道数量: 1
+]]></output>
+        </test-case>
+        <test-case id="1107" name="OnAllCarsTriggered_ShouldFireWhenAllCarsTriggered" fullname="LaneManagerTests.OnAllCarsTriggered_ShouldFireWhenAllCarsTriggered" methodname="OnAllCarsTriggered_ShouldFireWhenAllCarsTriggered" classname="LaneManagerTests" runstate="Runnable" seed="1451822025" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.002261" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[LaneManager] 跑道管理器初始化, 跑道数量: 1
+[LaneManager] 跑道 0 小车已注册
+[LaneCar] 小车 0 触发！清除跑道全部怪物
+[GridSystem] 已释放第 0 行所有格子
+[LaneManager] 跑道 0 已清除
+[LaneManager] 所有小车已消耗！
+]]></output>
+        </test-case>
+        <test-case id="1103" name="RegisterCar_ShouldMakeCarAvailable" fullname="LaneManagerTests.RegisterCar_ShouldMakeCarAvailable" methodname="RegisterCar_ShouldMakeCarAvailable" classname="LaneManagerTests" runstate="Runnable" seed="424556492" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000936" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[LaneManager] 跑道管理器初始化, 跑道数量: 1
+[LaneManager] 跑道 0 小车已注册
+]]></output>
+        </test-case>
+        <test-case id="1106" name="TriggerCar_ShouldTriggerCarAndFireEvent" fullname="LaneManagerTests.TriggerCar_ShouldTriggerCarAndFireEvent" methodname="TriggerCar_ShouldTriggerCarAndFireEvent" classname="LaneManagerTests" runstate="Runnable" seed="1381103622" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.002008" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[LaneManager] 跑道管理器初始化, 跑道数量: 1
+[LaneManager] 跑道 0 小车已注册
+[LaneCar] 小车 0 触发！清除跑道全部怪物
+[GridSystem] 已释放第 0 行所有格子
+[LaneManager] 跑道 0 已清除
+[LaneManager] 所有小车已消耗！
+]]></output>
+        </test-case>
+        <test-case id="1104" name="UnregisterCar_ShouldMakeCarUnavailable" fullname="LaneManagerTests.UnregisterCar_ShouldMakeCarUnavailable" methodname="UnregisterCar_ShouldMakeCarUnavailable" classname="LaneManagerTests" runstate="Runnable" seed="1088630642" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001386" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+[LaneManager] 跑道管理器初始化, 跑道数量: 1
+[LaneManager] 跑道 0 小车已注册
+[LaneManager] 跑道 0 小车已注销
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1111" name="MarbleShooterTests" fullname="MarbleShooterTests" classname="MarbleShooterTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.006528" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1112" name="Initialize_ShouldSetDataAndHealth" fullname="MarbleShooterTests.Initialize_ShouldSetDataAndHealth" methodname="Initialize_ShouldSetDataAndHealth" classname="MarbleShooterTests" runstate="Runnable" seed="948233632" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001713" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1114" name="IsDead_AfterFatalDamage_ShouldBeTrue" fullname="MarbleShooterTests.IsDead_AfterFatalDamage_ShouldBeTrue" methodname="IsDead_AfterFatalDamage_ShouldBeTrue" classname="MarbleShooterTests" runstate="Runnable" seed="1981203518" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000154" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1113" name="Update_WithNullData_ShouldNotThrow" fullname="MarbleShooterTests.Update_WithNullData_ShouldNotThrow" methodname="Update_WithNullData_ShouldNotThrow" classname="MarbleShooterTests" runstate="Runnable" seed="55248005" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000704" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1115" name="ObjectPoolTests" fullname="ObjectPoolTests" classname="ObjectPoolTests" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.019443" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1130" name="AutoExpand_ShouldCreateMultipleObjects_WhenPoolEmpty" fullname="ObjectPoolTests.AutoExpand_ShouldCreateMultipleObjects_WhenPoolEmpty" methodname="AutoExpand_ShouldCreateMultipleObjects_WhenPoolEmpty" classname="ObjectPoolTests" runstate="Runnable" seed="1537796471" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.006714" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 创建对象池 'Bullet', 初始大小: 0
+[ObjectPool] 对象池 'Bullet' 自动扩展
+[ObjectPool] 对象池 'Bullet' 自动扩展
+[ObjectPool] 对象池 'Bullet' 自动扩展
+]]></output>
+        </test-case>
+        <test-case id="1127" name="ClearAllPools_ShouldDestroyAllObjects" fullname="ObjectPoolTests.ClearAllPools_ShouldDestroyAllObjects" methodname="ClearAllPools_ShouldDestroyAllObjects" classname="ObjectPoolTests" runstate="Runnable" seed="1991759613" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001338" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 创建对象池 'Bullet', 初始大小: 3
+[ObjectPool] 创建对象池 'Orb', 初始大小: 2
+]]></output>
+        </test-case>
+        <test-case id="1126" name="ClearPool_ShouldDestroyAllObjectsInPool" fullname="ObjectPoolTests.ClearPool_ShouldDestroyAllObjectsInPool" methodname="ClearPool_ShouldDestroyAllObjectsInPool" classname="ObjectPoolTests" runstate="Runnable" seed="1344046033" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000603" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 创建对象池 'Bullet', 初始大小: 3
+]]></output>
+        </test-case>
+        <test-case id="1117" name="CreatePool_DuplicateName_ShouldNotCreateDuplicate" fullname="ObjectPoolTests.CreatePool_DuplicateName_ShouldNotCreateDuplicate" methodname="CreatePool_DuplicateName_ShouldNotCreateDuplicate" classname="ObjectPoolTests" runstate="Runnable" seed="770150665" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000606" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 创建对象池 'Orb', 初始大小: 3
+[ObjectPool] 对象池 'Orb' 已存在
+]]></output>
+        </test-case>
+        <test-case id="1116" name="CreatePool_ShouldPreInstantiateObjects" fullname="ObjectPoolTests.CreatePool_ShouldPreInstantiateObjects" methodname="CreatePool_ShouldPreInstantiateObjects" classname="ObjectPoolTests" runstate="Runnable" seed="1785528620" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000346" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 创建对象池 'Bullet', 初始大小: 5
+]]></output>
+        </test-case>
+        <test-case id="1124" name="Get_NonExistentPool_ShouldReturnNull" fullname="ObjectPoolTests.Get_NonExistentPool_ShouldReturnNull" methodname="Get_NonExistentPool_ShouldReturnNull" classname="ObjectPoolTests" runstate="Runnable" seed="978930858" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000394" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 对象池 'NonExistent' 不存在
+]]></output>
+        </test-case>
+        <test-case id="1119" name="Get_ShouldDecrementPoolCount" fullname="ObjectPoolTests.Get_ShouldDecrementPoolCount" methodname="Get_ShouldDecrementPoolCount" classname="ObjectPoolTests" runstate="Runnable" seed="2066919589" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000433" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 创建对象池 'Bullet', 初始大小: 5
+]]></output>
+        </test-case>
+        <test-case id="1118" name="Get_ShouldReturnActiveObject" fullname="ObjectPoolTests.Get_ShouldReturnActiveObject" methodname="Get_ShouldReturnActiveObject" classname="ObjectPoolTests" runstate="Runnable" seed="1702462270" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000571" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 创建对象池 'Bullet', 初始大小: 10
+]]></output>
+        </test-case>
+        <test-case id="1122" name="Get_WhenPoolEmpty_WithAutoExpand_ShouldCreateNewObject" fullname="ObjectPoolTests.Get_WhenPoolEmpty_WithAutoExpand_ShouldCreateNewObject" methodname="Get_WhenPoolEmpty_WithAutoExpand_ShouldCreateNewObject" classname="ObjectPoolTests" runstate="Runnable" seed="562380043" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000695" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 创建对象池 'Bullet', 初始大小: 0
+[ObjectPool] 对象池 'Bullet' 自动扩展
+]]></output>
+        </test-case>
+        <test-case id="1123" name="Get_WhenPoolEmpty_WithoutAutoExpand_ShouldReturnNull" fullname="ObjectPoolTests.Get_WhenPoolEmpty_WithoutAutoExpand_ShouldReturnNull" methodname="Get_WhenPoolEmpty_WithoutAutoExpand_ShouldReturnNull" classname="ObjectPoolTests" runstate="Runnable" seed="797228280" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000664" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 创建对象池 'Bullet', 初始大小: 0
+[ObjectPool] 对象池 'Bullet' 已空且未启用自动扩展
+]]></output>
+        </test-case>
+        <test-case id="1121" name="GetAfterReturn_ShouldReuseSameObject" fullname="ObjectPoolTests.GetAfterReturn_ShouldReuseSameObject" methodname="GetAfterReturn_ShouldReuseSameObject" classname="ObjectPoolTests" runstate="Runnable" seed="1649988593" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000480" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 创建对象池 'Bullet', 初始大小: 1
+]]></output>
+        </test-case>
+        <test-case id="1128" name="GetCount_NonExistentPool_ShouldReturnZero" fullname="ObjectPoolTests.GetCount_NonExistentPool_ShouldReturnZero" methodname="GetCount_NonExistentPool_ShouldReturnZero" classname="ObjectPoolTests" runstate="Runnable" seed="589296425" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000105" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1129" name="MultiplePools_ShouldBeIndependent" fullname="ObjectPoolTests.MultiplePools_ShouldBeIndependent" methodname="MultiplePools_ShouldBeIndependent" classname="ObjectPoolTests" runstate="Runnable" seed="1164705185" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000739" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 创建对象池 'Bullet', 初始大小: 5
+[ObjectPool] 创建对象池 'Orb', 初始大小: 3
+]]></output>
+        </test-case>
+        <test-case id="1125" name="Return_NonExistentPool_ShouldDestroyObject" fullname="ObjectPoolTests.Return_NonExistentPool_ShouldDestroyObject" methodname="Return_NonExistentPool_ShouldDestroyObject" classname="ObjectPoolTests" runstate="Runnable" seed="1301672132" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.001091" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 对象池 'NonExistent' 不存在，直接销毁对象
+]]></output>
+        </test-case>
+        <test-case id="1120" name="Return_ShouldDeactivateAndReparent" fullname="ObjectPoolTests.Return_ShouldDeactivateAndReparent" methodname="Return_ShouldDeactivateAndReparent" classname="ObjectPoolTests" runstate="Runnable" seed="1487090562" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000525" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[ObjectPool] 创建对象池 'Bullet', 初始大小: 10
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1131" name="ProjectileTests" fullname="ProjectileTests" classname="ProjectileTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.005392" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1134" name="GetRightBoundary_WithGridSystem_ShouldReturnPositive" fullname="ProjectileTests.GetRightBoundary_WithGridSystem_ShouldReturnPositive" methodname="GetRightBoundary_WithGridSystem_ShouldReturnPositive" classname="ProjectileTests" runstate="Runnable" seed="88837620" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000846" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1133" name="Initialize_MultipleTimes_ShouldNotThrow" fullname="ProjectileTests.Initialize_MultipleTimes_ShouldNotThrow" methodname="Initialize_MultipleTimes_ShouldNotThrow" classname="ProjectileTests" runstate="Runnable" seed="23178941" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000361" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+        <test-case id="1132" name="Initialize_ShouldSetDamageAndLane" fullname="ProjectileTests.Initialize_ShouldSetDamageAndLane" methodname="Initialize_ShouldSetDamageAndLane" classname="ProjectileTests" runstate="Runnable" seed="1502900329" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000332" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1135" name="ResourceManagerTests" fullname="ResourceManagerTests" classname="ResourceManagerTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.023205" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1141" name="AddPower_ShouldNotExceedMax" fullname="ResourceManagerTests.AddPower_ShouldNotExceedMax" methodname="AddPower_ShouldNotExceedMax" classname="ResourceManagerTests" runstate="Runnable" seed="1460685195" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000534" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1143" name="ConsumePower_ShouldFireOnPowerChanged" fullname="ResourceManagerTests.ConsumePower_ShouldFireOnPowerChanged" methodname="ConsumePower_ShouldFireOnPowerChanged" classname="ResourceManagerTests" runstate="Runnable" seed="636633048" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000219" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1139" name="ConsumePower_WhenEnough_ShouldDeduct" fullname="ResourceManagerTests.ConsumePower_WhenEnough_ShouldDeduct" methodname="ConsumePower_WhenEnough_ShouldDeduct" classname="ResourceManagerTests" runstate="Runnable" seed="540690118" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000096" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1140" name="ConsumePower_WhenNotEnough_ShouldFail" fullname="ResourceManagerTests.ConsumePower_WhenNotEnough_ShouldFail" methodname="ConsumePower_WhenNotEnough_ShouldFail" classname="ResourceManagerTests" runstate="Runnable" seed="905157901" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000089" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1137" name="HasEnoughPower_WhenEnough_ShouldReturnTrue" fullname="ResourceManagerTests.HasEnoughPower_WhenEnough_ShouldReturnTrue" methodname="HasEnoughPower_WhenEnough_ShouldReturnTrue" classname="ResourceManagerTests" runstate="Runnable" seed="728050576" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000074" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1138" name="HasEnoughPower_WhenNotEnough_ShouldReturnFalse" fullname="ResourceManagerTests.HasEnoughPower_WhenNotEnough_ShouldReturnFalse" methodname="HasEnoughPower_WhenNotEnough_ShouldReturnFalse" classname="ResourceManagerTests" runstate="Runnable" seed="2066767095" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000070" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1136" name="InitialPower_ShouldEqualMaxPower" fullname="ResourceManagerTests.InitialPower_ShouldEqualMaxPower" methodname="InitialPower_ShouldEqualMaxPower" classname="ResourceManagerTests" runstate="Runnable" seed="1293623065" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000073" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1142" name="ResetPower_ShouldRestoreToMax" fullname="ResourceManagerTests.ResetPower_ShouldRestoreToMax" methodname="ResetPower_ShouldRestoreToMax" classname="ResourceManagerTests" runstate="Runnable" seed="1552141405" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000089" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1144" name="UnitPlacementTests" fullname="UnitPlacementTests" classname="UnitPlacementTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.020582" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1146" name="ClearSelection_ShouldSetToNull" fullname="UnitPlacementTests.ClearSelection_ShouldSetToNull" methodname="ClearSelection_ShouldSetToNull" classname="UnitPlacementTests" runstate="Runnable" seed="1271642055" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000519" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1148" name="Instance_AfterAwake_ShouldNotBeNull" fullname="UnitPlacementTests.Instance_AfterAwake_ShouldNotBeNull" methodname="Instance_AfterAwake_ShouldNotBeNull" classname="UnitPlacementTests" runstate="Runnable" seed="67244053" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000106" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1147" name="SelectDefender_ShouldFireEvent" fullname="UnitPlacementTests.SelectDefender_ShouldFireEvent" methodname="SelectDefender_ShouldFireEvent" classname="UnitPlacementTests" runstate="Runnable" seed="1440787673" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000187" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1145" name="SelectDefender_ShouldSetSelectedDefender" fullname="UnitPlacementTests.SelectDefender_ShouldSetSelectedDefender" methodname="SelectDefender_ShouldSetSelectedDefender" classname="UnitPlacementTests" runstate="Runnable" seed="1547642194" result="Passed" start-time="2026-06-08 06:02:40Z" end-time="2026-06-08 06:02:40Z" duration="0.000101" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: /Users/grape/Library/Application Support/DefaultCompany/toy-vs-monster/TestResults.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

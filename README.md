@@ -1,4 +1,4 @@
-# AI-game - 塔防游戏项目
+# toy-vs-monster - 塔防游戏项目
 
 基于 Unity 6.3 LTS 的 2.5D 塔防游戏，采用 OpenSpec 规范驱动工作流开发。
 
@@ -24,7 +24,7 @@
 ## 项目结构
 
 ```
-AI-game/
+toy-vs-monster/
 ├── openspec/                    # OpenSpec 工作流文档
 │   ├── config.yaml              # 项目配置
 │   ├── specs/                   # 主规范（从变更同步）
@@ -63,7 +63,7 @@ AI-game/
 ### 1. 克隆仓库
 ```bash
 git clone <仓库地址>
-cd AI-game
+cd toy-vs-monster
 ```
 
 ### 2. 打开 Unity 项目

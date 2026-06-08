@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: AI-game
+  productName: toy-vs-monster
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -167,9 +167,9 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.DefaultCompany.AIgame
-    Standalone: com.DefaultCompany.AI-game
-    iPhone: com.DefaultCompany.AI-game
+    Android: com.DefaultCompany.toy-vs-monster
+    Standalone: com.DefaultCompany.toy-vs-monster
+    iPhone: com.DefaultCompany.toy-vs-monster
   buildNumber:
     Standalone: 0
     VisionOS: 0
