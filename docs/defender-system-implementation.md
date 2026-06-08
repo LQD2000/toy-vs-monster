@@ -209,7 +209,24 @@ public class DefenderData : ScriptableObject
 
 所有字段使用 `[Header]` 分组 + `[SerializeField] private _fieldName` 模式，与项目规范一致。
 
-### 2. 单位放置系统（UnitPlacement）
+### 2. Prefab 创建
+
+> 📖 详细步骤参见：
+> - [`game/Assets/Prefabs/Defenders/README.md`](../game/Assets/Prefabs/Defenders/README.md) - 弹珠射手 Prefab
+> - [`game/Assets/Prefabs/Projectiles/README.md`](../game/Assets/Prefabs/Projectiles/README.md) - 弹丸 Prefab
+
+**MarbleShooter Prefab 组件：**
+- SpriteRenderer（精灵图）
+- MarbleShooter（攻击脚本）
+- Collider2D（点击检测）
+
+**Marble Prefab 组件：**
+- SpriteRenderer（弹珠图）
+- Projectile（弹丸脚本）
+- CircleCollider2D（触发器）
+- Rigidbody2D（Kinematic）
+
+### 3. 单位放置系统（UnitPlacement）
 
 - 使用 **Unity New Input System** 的 `PlayerControls` 处理点击输入
 - 通过 `_controls.Gameplay.Tap.performed` 事件订阅点击
