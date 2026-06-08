@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.TestTools;
 using System;
 
 [TestFixture]
@@ -18,7 +19,7 @@ public class EventSystemTests
     [TearDown]
     public void TearDown()
     {
-        Object.DestroyImmediate(_gameObject);
+        UnityEngine.Object.DestroyImmediate(_gameObject);
         SingletonTestHelper.ResetSingleton<EventSystem>();
     }
 
@@ -126,7 +127,7 @@ public class EventSystemTests
         _eventSystem.On("ErrorEvent", () => throw new System.Exception("Test failure"));
         _eventSystem.On("ErrorEvent", () => callCount++);
 
-        // Should not throw — exception is caught internally
+        LogAssert.Expect(LogType.Error, "[EventSystem] 事件 'ErrorEvent' 回调异常: Test failure");
         Assert.DoesNotThrow(() => _eventSystem.Emit("ErrorEvent"));
         Assert.AreEqual(1, callCount,
             "Other callbacks should still execute after one callback throws");

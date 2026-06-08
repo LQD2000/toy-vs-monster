@@ -13,4 +13,15 @@ public static class SingletonTestHelper
         var setter = prop?.GetSetMethod(nonPublic: true);
         setter?.Invoke(null, new object[] { null });
     }
+
+    /// <summary>
+    /// 手动调用组件的 Awake 方法（Edit Mode 测试中 Awake 不会自动调用）
+    /// </summary>
+    public static void InvokeAwake(MonoBehaviour component)
+    {
+        if (component == null) return;
+        var method = component.GetType().GetMethod("Awake", 
+            BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+        method?.Invoke(component, null);
+    }
 }

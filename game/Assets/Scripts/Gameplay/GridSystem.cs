@@ -202,7 +202,14 @@ public class GridSystem : MonoBehaviour
             {
                 if (_cells[row, col].Occupant != null)
                 {
-                    Destroy(_cells[row, col].Occupant);
+                    if (Application.isPlaying)
+                    {
+                        Destroy(_cells[row, col].Occupant);
+                    }
+                    else
+                    {
+                        DestroyImmediate(_cells[row, col].Occupant);
+                    }
                 }
                 _cells[row, col].IsOccupied = false;
                 _cells[row, col].Occupant = null;

@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.TestTools;
 
 [TestFixture]
 public class GridSystemTests
@@ -12,12 +13,14 @@ public class GridSystemTests
     {
         _gameObject = new GameObject();
         _gridSystem = _gameObject.AddComponent<GridSystem>();
+        LogAssert.Expect(LogType.Log, "[GridSystem] 网格初始化完成: 5 行 x 10 列, 原点: (-6.00, -4.00, 0.00)");
+        SingletonTestHelper.InvokeAwake(_gridSystem);
     }
 
     [TearDown]
     public void TearDown()
     {
-        Object.DestroyImmediate(_gameObject);
+        UnityEngine.Object.DestroyImmediate(_gameObject);
         SingletonTestHelper.ResetSingleton<GridSystem>();
     }
 
@@ -81,12 +84,13 @@ public class GridSystemTests
     {
         GameObject occupant = new GameObject("TestOccupant");
 
+        LogAssert.Expect(LogType.Log, "[GridSystem] 格子 (0, 0) 被占用: TestOccupant");
         bool result = _gridSystem.OccupyCell(0, 0, occupant);
 
         Assert.IsTrue(result);
         Assert.IsTrue(_gridSystem.IsCellOccupied(0, 0));
 
-        Object.DestroyImmediate(occupant);
+        UnityEngine.Object.DestroyImmediate(occupant);
     }
 
     [Test]
@@ -95,13 +99,15 @@ public class GridSystemTests
         GameObject occupant1 = new GameObject("Occupant1");
         GameObject occupant2 = new GameObject("Occupant2");
 
+        LogAssert.Expect(LogType.Log, "[GridSystem] 格子 (0, 0) 被占用: Occupant1");
         _gridSystem.OccupyCell(0, 0, occupant1);
+        LogAssert.Expect(LogType.Log, "[GridSystem] 格子 (0, 0) 已被占用");
         bool result = _gridSystem.OccupyCell(0, 0, occupant2);
 
         Assert.IsFalse(result);
 
-        Object.DestroyImmediate(occupant1);
-        Object.DestroyImmediate(occupant2);
+        UnityEngine.Object.DestroyImmediate(occupant1);
+        UnityEngine.Object.DestroyImmediate(occupant2);
     }
 
     [Test]
@@ -109,32 +115,39 @@ public class GridSystemTests
     {
         GameObject occupant = new GameObject("TestOccupant");
 
+        LogAssert.Expect(LogType.Warning, "[GridSystem] 占用格子超出范围: (-1, 0)");
         bool result = _gridSystem.OccupyCell(-1, 0, occupant);
 
         Assert.IsFalse(result);
 
-        Object.DestroyImmediate(occupant);
+        UnityEngine.Object.DestroyImmediate(occupant);
     }
 
     [Test]
     public void ReleaseCell_OccupiedCell_ShouldClearOccupation()
     {
         GameObject occupant = new GameObject("TestOccupant");
+        LogAssert.Expect(LogType.Log, "[GridSystem] 格子 (1, 1) 被占用: TestOccupant");
         _gridSystem.OccupyCell(1, 1, occupant);
 
+        LogAssert.Expect(LogType.Log, "[GridSystem] 释放格子 (1, 1)");
         _gridSystem.ReleaseCell(1, 1);
 
         Assert.IsFalse(_gridSystem.IsCellOccupied(1, 1));
 
-        Object.DestroyImmediate(occupant);
+        UnityEngine.Object.DestroyImmediate(occupant);
     }
 
     [Test]
     public void IsCellOccupied_OutOfBounds_ShouldReturnTrue()
     {
+        LogAssert.Expect(LogType.Warning, "[GridSystem] 检查占用超出范围: (-1, 0)");
         Assert.IsTrue(_gridSystem.IsCellOccupied(-1, 0));
+        LogAssert.Expect(LogType.Warning, "[GridSystem] 检查占用超出范围: (0, -1)");
         Assert.IsTrue(_gridSystem.IsCellOccupied(0, -1));
+        LogAssert.Expect(LogType.Warning, "[GridSystem] 检查占用超出范围: (5, 0)");
         Assert.IsTrue(_gridSystem.IsCellOccupied(5, 0));
+        LogAssert.Expect(LogType.Warning, "[GridSystem] 检查占用超出范围: (0, 10)");
         Assert.IsTrue(_gridSystem.IsCellOccupied(0, 10));
     }
 
@@ -143,9 +156,12 @@ public class GridSystemTests
     {
         GameObject occupant0 = new GameObject("Occupant0");
         GameObject occupant1 = new GameObject("Occupant1");
+        LogAssert.Expect(LogType.Log, "[GridSystem] 格子 (2, 0) 被占用: Occupant0");
         _gridSystem.OccupyCell(2, 0, occupant0);
+        LogAssert.Expect(LogType.Log, "[GridSystem] 格子 (2, 5) 被占用: Occupant1");
         _gridSystem.OccupyCell(2, 5, occupant1);
 
+        LogAssert.Expect(LogType.Log, "[GridSystem] 已释放第 2 行所有格子");
         _gridSystem.ReleaseRow(2);
 
         Assert.IsFalse(_gridSystem.IsCellOccupied(2, 0));
@@ -155,7 +171,9 @@ public class GridSystemTests
     [Test]
     public void ReleaseRow_OutOfBounds_ShouldNotThrow()
     {
+        LogAssert.Expect(LogType.Warning, "[GridSystem] 释放行超出范围: -1");
         Assert.DoesNotThrow(() => _gridSystem.ReleaseRow(-1));
+        LogAssert.Expect(LogType.Warning, "[GridSystem] 释放行超出范围: 5");
         Assert.DoesNotThrow(() => _gridSystem.ReleaseRow(5));
     }
 
@@ -164,7 +182,9 @@ public class GridSystemTests
     {
         GameObject occupant0 = new GameObject("Occupant0");
         GameObject occupant5 = new GameObject("Occupant5");
+        LogAssert.Expect(LogType.Log, "[GridSystem] 格子 (1, 0) 被占用: Occupant0");
         _gridSystem.OccupyCell(1, 0, occupant0);
+        LogAssert.Expect(LogType.Log, "[GridSystem] 格子 (1, 5) 被占用: Occupant5");
         _gridSystem.OccupyCell(1, 5, occupant5);
 
         var occupied = _gridSystem.GetOccupiedCols(1);
@@ -173,8 +193,8 @@ public class GridSystemTests
         Assert.Contains(0, occupied);
         Assert.Contains(5, occupied);
 
-        Object.DestroyImmediate(occupant0);
-        Object.DestroyImmediate(occupant5);
+        UnityEngine.Object.DestroyImmediate(occupant0);
+        UnityEngine.Object.DestroyImmediate(occupant5);
     }
 
     [Test]

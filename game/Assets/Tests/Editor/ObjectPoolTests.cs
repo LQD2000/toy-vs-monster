@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.TestTools;
 
 [TestFixture]
 public class ObjectPoolTests
@@ -13,6 +14,7 @@ public class ObjectPoolTests
     {
         _gameObject = new GameObject();
         _objectPool = _gameObject.AddComponent<ObjectPool>();
+        SingletonTestHelper.InvokeAwake(_objectPool);
 
         _prefab = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         _prefab.SetActive(false);
@@ -22,9 +24,9 @@ public class ObjectPoolTests
     public void TearDown()
     {
         if (_prefab != null)
-            Object.DestroyImmediate(_prefab);
+            UnityEngine.Object.DestroyImmediate(_prefab);
 
-        Object.DestroyImmediate(_gameObject);
+        UnityEngine.Object.DestroyImmediate(_gameObject);
         SingletonTestHelper.ResetSingleton<ObjectPool>();
     }
 
@@ -43,6 +45,7 @@ public class ObjectPoolTests
     public void CreatePool_ShouldPreInstantiateObjects()
     {
         var config = CreateTestConfig("Bullet", initialSize: 5);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Bullet', 初始大小: 5");
         _objectPool.CreatePool(config);
 
         Assert.AreEqual(5, _objectPool.GetCount("Bullet"));
@@ -52,7 +55,9 @@ public class ObjectPoolTests
     public void CreatePool_DuplicateName_ShouldNotCreateDuplicate()
     {
         var config = CreateTestConfig("Orb", initialSize: 3);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Orb', 初始大小: 3");
         _objectPool.CreatePool(config);
+        LogAssert.Expect(LogType.Warning, "[ObjectPool] 对象池 'Orb' 已存在");
         _objectPool.CreatePool(config);
 
         Assert.AreEqual(3, _objectPool.GetCount("Orb"),
@@ -63,6 +68,7 @@ public class ObjectPoolTests
     public void Get_ShouldReturnActiveObject()
     {
         var config = CreateTestConfig("Bullet");
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Bullet', 初始大小: 10");
         _objectPool.CreatePool(config);
 
         var obj = _objectPool.Get("Bullet", Vector3.one, Quaternion.identity);
@@ -76,6 +82,7 @@ public class ObjectPoolTests
     public void Get_ShouldDecrementPoolCount()
     {
         var config = CreateTestConfig("Bullet", initialSize: 5);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Bullet', 初始大小: 5");
         _objectPool.CreatePool(config);
 
         var obj = _objectPool.Get("Bullet", Vector3.zero, Quaternion.identity);
@@ -87,6 +94,7 @@ public class ObjectPoolTests
     public void Return_ShouldDeactivateAndReparent()
     {
         var config = CreateTestConfig("Bullet");
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Bullet', 初始大小: 10");
         _objectPool.CreatePool(config);
         var obj = _objectPool.Get("Bullet", Vector3.zero, Quaternion.identity);
 
@@ -101,6 +109,7 @@ public class ObjectPoolTests
     public void GetAfterReturn_ShouldReuseSameObject()
     {
         var config = CreateTestConfig("Bullet", initialSize: 1);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Bullet', 初始大小: 1");
         _objectPool.CreatePool(config);
         var obj1 = _objectPool.Get("Bullet", Vector3.zero, Quaternion.identity);
 
@@ -115,8 +124,10 @@ public class ObjectPoolTests
     public void Get_WhenPoolEmpty_WithAutoExpand_ShouldCreateNewObject()
     {
         var config = CreateTestConfig("Bullet", initialSize: 0, autoExpand: true);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Bullet', 初始大小: 0");
         _objectPool.CreatePool(config);
 
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 对象池 'Bullet' 自动扩展");
         var obj = _objectPool.Get("Bullet", Vector3.zero, Quaternion.identity);
 
         Assert.IsNotNull(obj);
@@ -129,8 +140,10 @@ public class ObjectPoolTests
     public void Get_WhenPoolEmpty_WithoutAutoExpand_ShouldReturnNull()
     {
         var config = CreateTestConfig("Bullet", initialSize: 0, autoExpand: false);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Bullet', 初始大小: 0");
         _objectPool.CreatePool(config);
 
+        LogAssert.Expect(LogType.Warning, "[ObjectPool] 对象池 'Bullet' 已空且未启用自动扩展");
         var obj = _objectPool.Get("Bullet", Vector3.zero, Quaternion.identity);
 
         Assert.IsNull(obj);
@@ -139,6 +152,7 @@ public class ObjectPoolTests
     [Test]
     public void Get_NonExistentPool_ShouldReturnNull()
     {
+        LogAssert.Expect(LogType.Error, "[ObjectPool] 对象池 'NonExistent' 不存在");
         var obj = _objectPool.Get("NonExistent", Vector3.zero, Quaternion.identity);
 
         Assert.IsNull(obj);
@@ -150,6 +164,7 @@ public class ObjectPoolTests
         var obj = InstantiateForTest();
         Assert.IsTrue(obj != null);
 
+        LogAssert.Expect(LogType.Warning, "[ObjectPool] 对象池 'NonExistent' 不存在，直接销毁对象");
         _objectPool.Return("NonExistent", obj);
 
         // Object should be destroyed (Unity fake-null after DestroyImmediate)
@@ -160,6 +175,7 @@ public class ObjectPoolTests
     public void ClearPool_ShouldDestroyAllObjectsInPool()
     {
         var config = CreateTestConfig("Bullet", initialSize: 3);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Bullet', 初始大小: 3");
         _objectPool.CreatePool(config);
 
         var obj1 = _objectPool.Get("Bullet", Vector3.zero, Quaternion.identity);
@@ -178,7 +194,9 @@ public class ObjectPoolTests
     {
         var config1 = CreateTestConfig("Bullet", initialSize: 3);
         var config2 = CreateTestConfig("Orb", initialSize: 2);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Bullet', 初始大小: 3");
         _objectPool.CreatePool(config1);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Orb', 初始大小: 2");
         _objectPool.CreatePool(config2);
 
         _objectPool.ClearAllPools();
@@ -198,7 +216,9 @@ public class ObjectPoolTests
     {
         var bulletConfig = CreateTestConfig("Bullet", initialSize: 5);
         var orbConfig = CreateTestConfig("Orb", initialSize: 3);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Bullet', 初始大小: 5");
         _objectPool.CreatePool(bulletConfig);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Orb', 初始大小: 3");
         _objectPool.CreatePool(orbConfig);
 
         var bullet = _objectPool.Get("Bullet", Vector3.zero, Quaternion.identity);
@@ -211,10 +231,14 @@ public class ObjectPoolTests
     public void AutoExpand_ShouldCreateMultipleObjects_WhenPoolEmpty()
     {
         var config = CreateTestConfig("Bullet", initialSize: 0, autoExpand: true);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 创建对象池 'Bullet', 初始大小: 0");
         _objectPool.CreatePool(config);
 
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 对象池 'Bullet' 自动扩展");
         var obj1 = _objectPool.Get("Bullet", Vector3.zero, Quaternion.identity);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 对象池 'Bullet' 自动扩展");
         var obj2 = _objectPool.Get("Bullet", Vector3.one, Quaternion.identity);
+        LogAssert.Expect(LogType.Log, "[ObjectPool] 对象池 'Bullet' 自动扩展");
         var obj3 = _objectPool.Get("Bullet", Vector3.one * 2, Quaternion.identity);
 
         Assert.IsNotNull(obj1);

@@ -38,7 +38,12 @@ public class ObjectPool : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        
+        // DontDestroyOnLoad 只能在 Play Mode 下使用
+        if (Application.isPlaying)
+        {
+            DontDestroyOnLoad(gameObject);
+        }
 
         InitializePools();
     }
@@ -139,7 +144,14 @@ public class ObjectPool : MonoBehaviour
         if (!_pools.ContainsKey(poolName))
         {
             Debug.LogWarning($"[ObjectPool] 对象池 '{poolName}' 不存在，直接销毁对象");
-            Destroy(obj);
+            if (Application.isPlaying)
+            {
+                Destroy(obj);
+            }
+            else
+            {
+                DestroyImmediate(obj);
+            }
             return;
         }
 
@@ -160,7 +172,14 @@ public class ObjectPool : MonoBehaviour
             {
                 if (obj != null)
                 {
-                    Destroy(obj);
+                    if (Application.isPlaying)
+                    {
+                        Destroy(obj);
+                    }
+                    else
+                    {
+                        DestroyImmediate(obj);
+                    }
                 }
             }
             _pools[poolName].Clear();
