@@ -64,3 +64,6 @@ ignore.conf
 
 # OpenSpec (optional, if you want to exclude spec workflow files)
 # openspec/
+
+# 错误日志
+错误日志/
