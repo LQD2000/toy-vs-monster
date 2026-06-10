@@ -1,5 +1,9 @@
 # 弹丸 Prefab 创建指南
 
+> **创建步骤**: Step 6 - 战斗系统
+> **规格文档**: `openspec/specs/combat-system/spec.md`
+> **归档位置**: `openspec/changes/archive/2026-06-10-toy-tower-defense-step6/`
+
 ## 文件位置
 `game/Assets/Prefabs/Projectiles/Marble.prefab`
 

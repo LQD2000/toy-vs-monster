@@ -1,5 +1,10 @@
 # 弹珠射手 Prefab 创建指南
 
+> **创建步骤**: Step 4 - 防守方系统（初始创建）
+> **更新步骤**: Step 6 - 战斗系统（新增 Health + AttackComponent 组件）
+> **规格文档**: `openspec/specs/combat-system/spec.md`
+> **归档位置**: `openspec/changes/archive/2026-06-10-toy-tower-defense-step6/`
+
 ## 文件位置
 `game/Assets/Prefabs/Defenders/MarbleShooter.prefab`
 
@@ -22,10 +27,19 @@
 - Sorting Layer: Default
 - Order in Layer: 5
 
-#### MarbleShooter (Script)
-- 继承自 Defender 基类
+#### Health (Script)
+- Max Health: 100
+- 自动添加（通过 RequireComponent）
+
+#### AttackComponent (Script)
 - Projectile Prefab: 拖拽 `Marble.prefab` 到此字段
 - Fire Point: 创建子 GameObject 作为发射点
+- Projectile Pool Name: `MarbleProjectile`
+- 自动添加（通过 RequireComponent）
+
+#### MarbleShooter (Script)
+- 继承自 Defender 基类
+- 自动添加 Health 和 AttackComponent
 
 #### Collider2D
 - 类型: BoxCollider2D
@@ -69,9 +83,26 @@
 | 电力消耗 | 50 | 放置消耗 |
 | 最大等级 | 12 | 最大等级 |
 
+## 组件依赖关系
+
+```
+MarbleShooter (Defender)
+├── [RequireComponent] Health
+│   ├── Max Health: 100
+│   └── OnDead 事件 → 触发死亡逻辑
+├── [RequireComponent] AttackComponent
+│   ├── Projectile Prefab: Marble.prefab
+│   ├── Fire Point: FirePoint 子对象
+│   └── Projectile Pool Name: MarbleProjectile
+└── Defender 基类
+    ├── Data: DefenderData
+    └── Initialize() → 初始化所有组件
+```
+
 ## 注意事项
 
 - Prefab 必须在 Unity Editor 中创建，无法通过代码生成
 - 确保 Sprite 图片已导入到 `game/Assets/Art/Sprites/Defenders/`
 - 需要先创建 `Marble.prefab` 弹丸 Prefab
+- Health 和 AttackComponent 会通过 RequireComponent 自动添加
 - 配置完成后，在 DefenderFactory 中引用 MarbleShooterData
