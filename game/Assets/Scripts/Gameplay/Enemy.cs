@@ -1,45 +1,45 @@
 using UnityEngine;
 using System;
 
+[RequireComponent(typeof(Health))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int _maxHealth = 100;
-    [SerializeField] private int _currentHealth;
 
+    private Health _health;
     private int _currentRow;
 
-    public int MaxHealth => _maxHealth;
-    public int CurrentHealth => _currentHealth;
+    public int MaxHealth => _health.MaxHealth;
+    public int CurrentHealth => _health.CurrentHealth;
     public int CurrentRow => _currentRow;
-    public bool IsDead => _currentHealth <= 0;
+    public bool IsDead => _health.IsDead;
 
     public event Action<Enemy> OnEnemyDead;
 
     private void Awake()
     {
-        _currentHealth = _maxHealth;
+        _health = GetComponent<Health>();
+        _health.Initialize(_maxHealth);
+        _health.OnDead += HandleDeath;
     }
 
     public void Initialize(int health, int row)
     {
-        _maxHealth = health;
-        _currentHealth = health;
+        if (_health == null)
+        {
+            _health = GetComponent<Health>();
+            _health.OnDead += HandleDeath;
+        }
+        _health.Initialize(health);
         _currentRow = row;
     }
 
     public void TakeDamage(int damage)
     {
-        if (IsDead) return;
-
-        _currentHealth -= damage;
-        if (_currentHealth <= 0)
-        {
-            _currentHealth = 0;
-            Die();
-        }
+        _health.TakeDamage(damage);
     }
 
-    private void Die()
+    private void HandleDeath()
     {
         Debug.Log($"[Enemy] 敌人死亡 (Row: {_currentRow})");
         OnEnemyDead?.Invoke(this);

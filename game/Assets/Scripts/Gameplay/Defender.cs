@@ -1,71 +1,72 @@
 using UnityEngine;
 
-/// <summary>
-/// 防守方基类 - 所有防守方单位的父类
-/// 管理单位生命周期、受伤、死亡
-/// </summary>
+[RequireComponent(typeof(Health))]
 public abstract class Defender : MonoBehaviour
 {
     [Header("运行时数据")]
     [SerializeField] private DefenderData _data;
 
-    private int _currentHealth;
+    private Health _health;
     private int _currentRow;
     private int _currentCol;
-    private bool _isDead;
 
     public DefenderData Data => _data;
-    public int CurrentHealth => _currentHealth;
+    public int CurrentHealth => _health.CurrentHealth;
     public int CurrentRow => _currentRow;
     public int CurrentCol => _currentCol;
-    public bool IsDead => _isDead;
+    public bool IsDead => _health.IsDead;
 
     public event System.Action<Defender> OnDefenderDead;
 
     protected virtual void Awake()
     {
+        _health = GetComponent<Health>();
+        _health.OnDead += HandleDeath;
     }
 
     public virtual void Initialize(DefenderData data, int row, int col)
     {
         _data = data;
-        _currentHealth = data.MaxHealth;
         _currentRow = row;
         _currentCol = col;
-        _isDead = false;
+
+        if (_health == null)
+        {
+            _health = GetComponent<Health>();
+            _health.OnDead += HandleDeath;
+        }
+        _health.Initialize(data.MaxHealth);
     }
 
     public void TakeDamage(int damage)
     {
-        if (_isDead) return;
-
-        _currentHealth -= damage;
-        if (_currentHealth <= 0)
-        {
-            _currentHealth = 0;
-            Die();
-        }
+        _health.TakeDamage(damage);
     }
 
-    protected virtual void Die()
+    private void HandleDeath()
     {
-        if (_isDead) return;
-        _isDead = true;
-
         if (GridSystem.Instance != null)
         {
             GridSystem.Instance.ReleaseCell(_currentRow, _currentCol);
         }
 
         OnDefenderDead?.Invoke(this);
-        
-        if (Application.isPlaying)
+
+        if (ObjectPool.Instance != null)
         {
-            Destroy(gameObject);
+            ObjectPool.Instance.Return("Defender", gameObject);
         }
         else
         {
-            DestroyImmediate(gameObject);
+            if (Application.isPlaying)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                DestroyImmediate(gameObject);
+            }
         }
     }
+
 }

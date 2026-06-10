@@ -1,78 +1,24 @@
 using UnityEngine;
 
-/// <summary>
-/// 弹珠射手 - 发射弹珠攻击跑道上的敌人
-/// 继承自 Defender 基类
-/// </summary>
+[RequireComponent(typeof(AttackComponent))]
 public class MarbleShooter : Defender
 {
-    [Header("弹珠射手配置")]
-    [SerializeField] private GameObject _projectilePrefab;
-    [SerializeField] private Transform _firePoint;
-
-    private float _attackTimer;
+    private AttackComponent _attackComponent;
 
     protected override void Awake()
     {
         base.Awake();
+        _attackComponent = GetComponent<AttackComponent>();
     }
 
-    private void Update()
+    public override void Initialize(DefenderData data, int row, int col)
     {
-        if (Data == null || IsDead) return;
+        base.Initialize(data, row, col);
 
-        _attackTimer += Time.deltaTime;
-        if (_attackTimer >= 1f / Data.AttackSpeed)
+        if (_attackComponent == null)
         {
-            _attackTimer = 0f;
-            if (HasTargetInRange())
-            {
-                TryAttack();
-            }
+            _attackComponent = GetComponent<AttackComponent>();
         }
-    }
-
-    private bool HasTargetInRange()
-    {
-        if (Data.Range == -1) return true;
-
-        if (GridSystem.Instance == null) return false;
-
-        float rangeWorld = Data.Range * GridSystem.Instance.CellWidth;
-
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject enemyGo in enemies)
-        {
-            float distanceX = enemyGo.transform.position.x - transform.position.x;
-            if (distanceX > 0f && distanceX <= rangeWorld)
-            {
-                Enemy enemy = enemyGo.GetComponent<Enemy>();
-                if (enemy != null && enemy.CurrentRow == CurrentRow && !enemy.IsDead)
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    private void TryAttack()
-    {
-        if (ObjectPool.Instance == null) return;
-
-        GameObject projectileObj = ObjectPool.Instance.Get(
-            "MarbleProjectile",
-            _firePoint.position,
-            Quaternion.identity
-        );
-
-        if (projectileObj != null)
-        {
-            Projectile projectile = projectileObj.GetComponent<Projectile>();
-            if (projectile != null)
-            {
-                projectile.Initialize(Data.AttackPower, CurrentRow);
-            }
-        }
+        _attackComponent.Initialize(data.AttackPower, data.AttackSpeed, data.Range, row);
     }
 }

@@ -53,6 +53,7 @@ public class DefenderFactory : MonoBehaviour
             return null;
         }
 
+        instance.SetActive(true);
         defender.Initialize(data, row, col);
         instance.name = $"{data.DefenderName}_{row}_{col}";
 

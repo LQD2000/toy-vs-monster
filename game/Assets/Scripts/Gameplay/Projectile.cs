@@ -51,7 +51,8 @@ public class Projectile : MonoBehaviour
             Enemy enemy = other.GetComponent<Enemy>();
             if (enemy != null && enemy.CurrentRow == _laneRow)
             {
-                enemy.TakeDamage(_damage);
+                DamageCalculator.DamageResult result = DamageCalculator.CalculateDamage(_damage);
+                enemy.TakeDamage(result.finalDamage);
                 ReturnToPool();
             }
         }
