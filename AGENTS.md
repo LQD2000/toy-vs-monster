@@ -86,7 +86,7 @@ toy-vs-monster — greenfield project, spec-driven development via OpenSpec. Chi
 5. **使用示例**：如何调用、如何配置
 6. **注意事项**：已知限制、性能考量、后续优化方向
 
-文档命名规范：`<模块名>-implementation.md`（如 `lane-system-implementation.md`）
+文档命名规范：`step<N>-<模块名>-implementation.md`（如 `step3-lane-grid-system-implementation.md`）
 
 ## UNITY EDITOR 手动步骤文档规则
 
@@ -102,7 +102,7 @@ Unity 中有些资源只能在 Editor 中手动创建（如 Prefab、Scene、Ani
    - 属性参考值（来自 `data/` 目录的设计文档）
    - 注意事项和常见问题
 
-3. **在实现文档中引用**：在 `<模块名>-implementation.md` 中引用 README 的创建步骤
+3. **在实现文档中引用**：在 `step<N>-<模块名>-implementation.md` 中引用 README 的创建步骤
 
 **适用场景**：
 - Prefab 创建（需要拖拽组件、配置 Inspector）
@@ -155,6 +155,57 @@ game/Assets/Prefabs/
 - [注意事项1]
 - [注意事项2]
 ```
+
+## README 步骤标注规则
+
+**每个 README 文件必须在顶部标注资源所属步骤。**
+
+README 文件开头必须包含步骤引用信息，格式如下：
+
+```markdown
+> **创建步骤**: Step N - 步骤名称（初始创建）
+> **更新步骤**: Step M - 步骤名称（更新说明）  # 如果有后续更新
+> **规格文档**: `openspec/specs/<capability>/spec.md`
+> **归档位置**: `openspec/changes/archive/<date>-<step-name>/`
+```
+
+**示例**：
+```markdown
+# DustSprite Prefab 创建指南
+
+> **创建步骤**: Step 5 - 进攻方系统（初始创建）
+> **更新步骤**: Step 6 - 战斗系统（新增 Health 组件）
+> **规格文档**: `openspec/specs/combat-system/spec.md`
+> **归档位置**: `openspec/changes/archive/2026-06-10-toy-tower-defense-step6/`
+```
+
+**规则**：
+- **创建步骤**：标注该资源首次在哪一步创建
+- **更新步骤**：如果后续步骤对该资源有修改，标注更新的步骤
+- **规格文档**：链接到对应的规格文档
+- **归档位置**：链接到对应的归档目录
+
+## 实现文档命名规则
+
+**所有实现文档必须按步骤编号命名。**
+
+文档命名格式：`step<N>-<模块名>-implementation.md`
+
+**示例**：
+```
+docs/
+├── step1-project-init-implementation.md
+├── step2-core-framework-implementation.md
+├── step3-lane-grid-system-implementation.md
+├── step4-defender-system-implementation.md
+├── step5-attacker-system-implementation.md
+└── step6-combat-system-implementation.md
+```
+
+**规则**：
+- 步骤编号与 OpenSpec 变更名称中的步骤编号一致
+- 模块名使用 kebab-case 格式
+- 文件名全部小写
 
 ## CODE STYLE
 
