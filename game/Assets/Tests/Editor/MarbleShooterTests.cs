@@ -25,9 +25,12 @@ public class MarbleShooterTests
 
         _shooter = _shooterGo.AddComponent<MarbleShooter>();
 
-        var fpField = typeof(MarbleShooter).GetField("_firePoint",
+        var attackComponent = _shooterGo.GetComponent<AttackComponent>();
+        var fpField = typeof(AttackComponent).GetField("_firePoint",
             System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-        fpField?.SetValue(_shooter, firePointGo.transform);
+        fpField?.SetValue(attackComponent, firePointGo.transform);
+
+        SingletonTestHelper.InvokeAwake(_shooter);
     }
 
     [TearDown]

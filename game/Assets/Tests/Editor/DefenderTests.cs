@@ -15,6 +15,7 @@ public class DefenderTests
         _testData = ScriptableObject.CreateInstance<DefenderData>();
         _defenderGo = new GameObject();
         _defender = _defenderGo.AddComponent<MarbleShooter>();
+        SingletonTestHelper.InvokeAwake(_defender);
     }
 
     [TearDown]

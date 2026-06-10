@@ -52,6 +52,8 @@ public class DefenderFactoryTests
     public void CreateDefender_WithValidData_ShouldReturnDefender()
     {
         GameObject prefab = new GameObject("TestPrefab");
+        prefab.AddComponent<Health>();
+        prefab.AddComponent<AttackComponent>();
         prefab.AddComponent<MarbleShooter>();
         prefab.SetActive(false);
 

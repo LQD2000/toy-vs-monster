@@ -20,6 +20,7 @@ public class AttackerTests
         so.ApplyModifiedPropertiesWithoutUndo();
         _attackerGo = new GameObject();
         _attacker = _attackerGo.AddComponent<Attacker>();
+        SingletonTestHelper.InvokeAwake(_attacker);
     }
 
     [TearDown]
